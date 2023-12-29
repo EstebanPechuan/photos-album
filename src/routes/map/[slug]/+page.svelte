@@ -32,17 +32,21 @@
                 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
                 <img on:click={() => openModal(index)} src={`/src/lib/pictures/${data?.shortName}/${photo}`} alt={photo}>
             </div>
-        {/each}
-    </div>
-
-    {#if modal}
+            {/each}
+        </div>
+        
+        {#if modal}
         <div class="modal-container">
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
             <div class="close" on:click={closeModal}>X</div>
-
+            
             <div class="modal">
                 <swiper-container class="mySwiper" navigation="true" pagination="true" loop="true">
                     {#each data?.photos as photo}
-                        <swiper-slide>
+                    <swiper-slide>
+                            <!-- svelte-ignore a11y-click-events-have-key-events -->
+                            <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
                             <img on:click={openModal} src={`/src/lib/pictures/${data?.shortName}/${photo}`} alt={photo}>
                         </swiper-slide>
                     {/each}
