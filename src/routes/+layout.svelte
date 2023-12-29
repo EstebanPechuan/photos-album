@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Album de fotos - A&E</title>
+</svelte:head>
+
 <header>
     <nav>
         <ul>
